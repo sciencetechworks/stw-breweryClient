@@ -38,6 +38,9 @@ public class CommandLiner implements CommandLineRunner {
     URI uri = client.saveBeer(dto);
         
     System.out.println(uri.toString());
+    
+    //PERFORM PUT
+    client.updateBeer(UUID.randomUUID(), dto);
   }
 
 }
