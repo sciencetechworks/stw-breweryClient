@@ -2,6 +2,7 @@
 package com.stw.breweryclient.web.client;
 
 import com.stw.brewery.web.model.BeerDto;
+import java.net.URI;
 import java.util.UUID;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.web.client.RestTemplateBuilder;
@@ -25,6 +26,10 @@ public class BreweryClient {
     public BeerDto getBeerById(UUID uuid){
         return restTemplate.getForObject(apihost+BEER_PATH_V1+uuid.toString(),
                 BeerDto.class);
+    }
+    
+    public URI saveBeer(BeerDto beerDto){
+        return restTemplate.postForLocation(apihost+BEER_PATH_V1,beerDto);
     }
     
     /**
