@@ -41,6 +41,9 @@ public class CommandLiner implements CommandLineRunner {
     
     //PERFORM PUT
     client.updateBeer(UUID.randomUUID(), dto);
+    
+    //PERFORM DELETE
+    client.deleteBeer(UUID.randomUUID());
   }
 
 }
