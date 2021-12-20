@@ -17,7 +17,7 @@ import org.springframework.web.client.RestTemplate;
 @ConfigurationProperties(value="stw.brewery", ignoreInvalidFields = false)
 public class BreweryClient {
     public final String BEER_PATH_V1="/api/v1/beer/";
-    public final String CUSTOMER_PATH_V1="/api/v1/customer";
+    public final String CUSTOMER_PATH_V1="/api/v1/customer/";
     
     private String apihost;
     private final RestTemplate restTemplate;
